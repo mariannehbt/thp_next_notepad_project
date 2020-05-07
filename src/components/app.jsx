@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import MarkdownInput from 'components/MarkdownInput';
-import NoteDisplay from 'components/NoteDisplay';
+import MarkdownInput from 'components/markdown_input';
+import NoteDisplay from 'components/note_display';
 
 const App = () => {
 	const [note, setNote] = useState({});
