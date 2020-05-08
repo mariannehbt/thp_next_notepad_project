@@ -9,6 +9,12 @@ const App = () => {
 
 	return (
 		<div className='App'>
+			<div className='split left'>
+				<div>
+					<button className='btn btn-danger btn-lg btn-block'>Ajouter une note</button>
+				</div>
+				<NoteList />
+			</div>
 			<div className='split right'>
 				<div className='topright'>
 					<NoteDisplay title={note.title} content={note.content} />
@@ -21,11 +27,7 @@ const App = () => {
 							content: content
 						})}
 					/>
-					<p>{stored.title} {stored.content}</p>
 				</div>
-			</div>
-			<div className='split left'>
-				<NoteList />
 			</div>
 		</div>
 	);

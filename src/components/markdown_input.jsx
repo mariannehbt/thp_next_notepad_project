@@ -12,17 +12,17 @@ const MarkdownInput = ({ getNote, getStored }) => {
 
 	useEffect(() => {
 		getNote(input);
-		console.log(input);
+		// console.log(input);
 	}, [input]);
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		localStorage.setItem(input.title, JSON.stringify(input.content));
-		console.log(`*Saved* ${input.title} : ${input.content}`);
+		// console.log(`*Saved* ${input.title} : ${input.content}`);
 		console.log(input);
 		console.log(localStorage);
 		const storedContent = JSON.parse(localStorage.getItem(input.title));
-		console.log(`*Stored* = ${storedContent}`);
+		// console.log(`*Stored* = ${storedContent}`);
 		getStored(input.title, storedContent);	
 	};
 
